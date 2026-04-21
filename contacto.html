@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ponte en contacto con Mente Sana para consultas sobre bienestar.">
+    <meta name="keywords" content="contacto, ayuda, bienestar, formulario">
+    <meta name="author" content="Tu Nombre Aquí">
+    
+    <meta property="og:title" content="Contacto - Mente Sana">
+    <meta property="og:description" content="Escríbenos y comienza tu camino hacia la superación personal.">
+    
+    <title>Mente Sana | Contacto</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Mente Sana</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="informacion.html">Bienestar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="galeria.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tabla.html">Recursos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-4">
+                    <h1 style="color: var(--color-primario);">Contáctanos</h1>
+                    <p class="lead">¿Tienes dudas o necesitas orientación? Escríbenos.</p>
+                </div>
+
+                <div class="card shadow-sm p-4">
+                    <div id="mensajeExito" class="alert alert-success d-none text-center" role="alert">
+                        ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
+                    </div>
+
+                    <form id="formularioContacto" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez">
+                            <div id="errorNombre" class="text-danger small d-none mt-1">El nombre debe tener al menos 3 caracteres.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+                            <div id="errorEmail" class="text-danger small d-none mt-1">Ingresa un correo electrónico válido.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivo" class="form-label">Motivo de contacto (Select requerido)</label>
+                            <select class="form-select" id="motivo">
+                                <option value="">Seleccione una opción...</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="asesoria">Solicitar asesoría</option>
+                                <option value="sugerencia">Sugerencias</option>
+                            </select>
+                            <div id="errorMotivo" class="text-danger small d-none mt-1">Debes seleccionar un motivo.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..."></textarea>
+                            <div id="errorMensaje" class="text-danger small d-none mt-1">El mensaje debe tener al menos 20 caracteres.</div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="terminos">
+                            <label class="form-check-label" for="terminos">Acepto los términos y condiciones (Checkbox obligatorio)</label>
+                            <div id="errorTerminos" class="text-danger small d-none mt-1">Debes aceptar los términos para continuar.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p>&copy; 2026 Mente Sana - Desarrollado por sebastian David Rua. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
