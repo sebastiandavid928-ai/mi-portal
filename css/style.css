@@ -1,0 +1,33 @@
+/* Variables CSS obligatorias */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-acento: #1abc9c;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: #f8f9fa;
+    color: var(--color-primario);
+}
+
+/* Estilo para el Banner Hero */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+}
+
+.bg-primary {
+    background-color: var(--color-primario) !important;
+}
+
+/* Estilos para que se vea bien en móviles (Responsive) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+}
