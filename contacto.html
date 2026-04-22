@@ -50,19 +50,30 @@
                         ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
                     </div>
 
-                    <form id="formularioContacto" novalidate>
-                        
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez">
-                            <div id="errorNombre" class="text-danger small d-none mt-1">El nombre debe tener al menos 3 caracteres.</div>
-                        </div>
+                 <form id="miFormulario" class="needs-validation" novalidate>
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre Completo</label>
+        <input type="text" class="form-control" id="nombre" required>
+        <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" required>
+        <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
+    </div>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
-                            <div id="errorEmail" class="text-danger small d-none mt-1">Ingresa un correo electrónico válido.</div>
-                        </div>
+    <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
+    
+    <div id="mensajeExito" class="alert alert-success mt-3 d-none text-center">
+        ¡Tu mensaje ha sido enviado con éxito!
+    </div>
 
                         <div class="mb-3">
                             <label for="motivo" class="form-label">Motivo de contacto (Select requerido)</label>
