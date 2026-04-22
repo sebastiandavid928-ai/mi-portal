@@ -46,34 +46,20 @@
                 </div>
 
                 <div class="card shadow-sm p-4">
-                    <div id="mensajeExito" class="alert alert-success d-none text-center" role="alert">
-                        ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.
-                    </div>
-
-                 <form id="miFormulario" class="needs-validation" novalidate>
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre Completo</label>
-        <input type="text" class="form-control" id="nombre" required>
-        <div class="invalid-feedback">Por favor, ingresa tu nombre completo.</div>
-    </div>
-    
-    <div class="mb-3">
-        <label for="email" class="form-label">Correo Electrónico</label>
-        <input type="email" class="form-control" id="email" required>
-        <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
-    </div>
-    
-    <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-        <div class="invalid-feedback">El mensaje no puede estar vacío.</div>
-    </div>
-
-    <button class="btn btn-primary w-100" type="submit">Enviar Mensaje</button>
-    
-    <div id="mensajeExito" class="alert alert-success mt-3 d-none text-center">
-        ¡Tu mensaje ha sido enviado con éxito!
-    </div>
+                    
+                    <form id="formularioContacto">
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ej. Juan Pérez">
+                            <div id="errorNombre" class="text-danger small d-none mt-1">El nombre debe tener al menos 3 caracteres.</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com">
+                            <div id="errorEmail" class="text-danger small d-none mt-1">Por favor, ingresa un correo electrónico válido.</div>
+                        </div>
 
                         <div class="mb-3">
                             <label for="motivo" class="form-label">Motivo de contacto (Select requerido)</label>
@@ -85,7 +71,7 @@
                             </select>
                             <div id="errorMotivo" class="text-danger small d-none mt-1">Debes seleccionar un motivo.</div>
                         </div>
-
+                        
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
                             <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe aquí tu mensaje..."></textarea>
@@ -94,11 +80,16 @@
 
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="terminos">
-                            <label class="form-check-label" for="terminos">Acepto los términos y condiciones (Checkbox obligatorio)</label>
+                            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
                             <div id="errorTerminos" class="text-danger small d-none mt-1">Debes aceptar los términos para continuar.</div>
                         </div>
 
                         <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        
+                        <div id="mensajeExito" class="alert alert-success mt-3 d-none text-center">
+                            ¡Tu mensaje ha sido enviado con éxito! Nos pondremos en contacto pronto.
+                        </div>
+
                     </form>
                 </div>
             </div>
